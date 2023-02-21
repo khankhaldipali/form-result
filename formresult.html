@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style>
+		body
+		{
+			margin: 30px;
+			padding: 0;
+			background-color: rgb(193, 158, 188);
+		}
+		#main {
+			display: none;
+		}
+
+		#main input {
+			width: 100px;
+		}
+	</style>
+	<script type="text/javascript">
+		function submit() {
+			document.getElementById('main').style.display = "block";
+
+			var a = document.getElementById('no').value;
+			document.getElementById('ans').value = a;
+			var b = document.getElementById('name').value;
+			document.getElementById('ans1').value = b;
+			var c = document.getElementById('s1').value;
+			document.getElementById('ans2').value = c;
+			var d = document.getElementById('s2').value;
+			document.getElementById('ans3').value = d;
+			var e = document.getElementById('s3').value;
+			document.getElementById('ans4').value = e;
+			var f = document.getElementById('s4').value;
+			document.getElementById('ans5').value = f;
+			var g = document.getElementById('s5').value;
+			document.getElementById('ans6').value = g;
+			var total = parseFloat(c) + parseFloat(d) + parseFloat(e) + parseFloat(f) + parseFloat(g);
+			document.getElementById('total').value = total;
+			if (c <= "35") {
+				document.getElementById('ans2').style.background = "red";
+			}
+			else {
+				document.getElementById('ans2').style.background = "green";
+			}
+			if (d <= "35") {
+				document.getElementById('ans3').style.background = "red";
+			}
+			else {
+				document.getElementById('ans3').style.background = "green";
+			}
+			if (e <= "35") {
+				document.getElementById('ans4').style.background = "red";
+			}
+			else {
+				document.getElementById('ans4').style.background = "green";
+			}
+			if (f <= "35") {
+				document.getElementById('ans5').style.background = "red";
+			}
+			else {
+				document.getElementById('ans5').style.background = "green";
+			}
+			if (g <= "35") {
+				document.getElementById('ans6').style.background = "red";
+			}
+			else {
+				document.getElementById('ans6').style.background = "green";
+			}
+
+
+			if (c >= '35' && d >= '35' && e >= '35' && f >= '35' && g >= '35') {
+				document.getElementById('pass').value = "pass";
+				document.getElementById('pass').style.background = "green";
+			}
+			else {
+				document.getElementById('pass').value = "fail";
+				document.getElementById('pass').style.background = "red";
+			}
+
+		}
+		var z;
+		function myCreateFunction() {
+			var table = document.getElementById("main");
+			var row = table.insertRow(1);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			var cell5 = row.insertCell(4);
+			var cell6 = row.insertCell(5);
+			var cell7 = row.insertCell(6);
+			var cell8 = row.insertCell(7);
+			var cell9 = row.insertCell(8);
+
+			 var a=document.getElementById('no').value;
+			 var b = document.getElementById('name').value;
+			 var c = document.getElementById('s1').value;
+			 var d = document.getElementById('s2').value;
+			 var e = document.getElementById('s3').value;
+			 var f = document.getElementById('s4').value;
+			 var g = document.getElementById('s5').value;
+			var total = parseFloat(c) + parseFloat(d) + parseFloat(e) + parseFloat(f) + parseFloat(g);
+			document.getElementById('total').value = total;
+			
+			
+
+			if (c <= "35") {
+				cell3.style.color = "red";
+			}
+			else {
+				cell3.style.color = "green";
+			}
+			if (d <= "35") {
+				cell4.style.color = "red";
+			}
+			else {
+				cell4.style.color = "green";
+			}
+			if (e <= "35") {
+				cell5.style.color = "red";
+			}
+			else {
+				cell5.style.color = "green";
+			}
+			if (f <= "35") {
+				cell6.style.color = "red";
+			}
+			else {
+				cell6.style.color = "green";
+			}
+			if (g <= "35") {
+				cell7.style.color = "red";
+			}
+			else {
+				cell7.style.color = "green";
+			}
+
+
+			if (c >= '35' && d >= '35' && e >= '35' && f >= '35' && g >= '35') {
+				z="pass";
+				document.getElementById('pass').value = z;
+				cell9.style.color = "green";
+			}
+			else {
+				z="fail";
+				document.getElementById('pass').value = z;
+				cell9.style.color = "red";
+			}
+			cell1.innerHTML = a;
+			cell2.innerHTML = b;
+			cell3.innerHTML = c;
+			cell4.innerHTML = d;
+			cell5.innerHTML = e;
+			cell6.innerHTML = f;
+			cell7.innerHTML = g;
+			cell8.innerHTML = total;
+			cell9.innerHTML = z;
+		}
+			
+
+		function myDeleteFunction() {
+			document.getElementById("main").deleteRow(1);
+		}
+		function reset()
+		{
+			var a=document.getElementById('no').value="";
+			 var b = document.getElementById('name').value="";
+			 var c = document.getElementById('s1').value="";
+			 var d = document.getElementById('s2').value="";
+			 var e = document.getElementById('s3').value="";
+			 var f = document.getElementById('s4').value="";
+			 var g = document.getElementById('s5').value="";
+		}
+	</script>
+</head>
+
+<body>
+	<center>
+		<table>
+			<tr>
+				<th>
+					Roll No: <input type="text" name="" value="" id="no">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					Name:<input type="text" name="" value="" id="name">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					s1: <input type="text" name="" value="" id="s1">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					s2:<input type="text" name="" value="" id="s2">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					s3:<input type="text" name="" value="" id="s3">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					s4:<input type="text" name="" value="" id="s4">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					s5:<input type="text" name="" value="" id="s5">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<br><br>
+					<input type="submit" name="" onclick="submit()">
+					<button onclick="myCreateFunction()">Create row</button>
+					<button onclick="myDeleteFunction()">Delete row</button>
+					<button onclick="reset()">Reset</button>
+				</th>
+			</tr>
+
+		</table>
+		<br><br><br>
+
+		<table id="main" border="1px" width="1030px">
+			<tr>
+				<th>
+					Roll No:<br>
+					<input type="text" name="" value="" id="ans">
+				</th>
+				<th>
+					Name:<br><input type="text" name="" value="" id="ans1">
+				</th>
+				<th>
+					sub 1:<br><input type="text" name="" value="" id="ans2">
+				</th>
+				<th>
+					sub 2:<br><input type="text" name="" value="" id="ans3">
+				</th>
+				<th>
+					sub 3:<br><input type="text" name="" value="" id="ans4">
+				</th>
+				<th>
+					sub 4:<br><input type="text" name="" value="" id="ans5">
+				</th>
+				<th>
+					sub 5:<br><input type="text" name="" value="" id="ans6">
+				</th>
+				<th>
+					Total:<br><input type="text" name="" value="" id="total">
+				</th>
+				<th>
+					Result:<br><input type="text" name="" value="" id="pass">
+				</th>
+			</tr>
+		</table>
+	</center>
+</body>
+
+</html>
